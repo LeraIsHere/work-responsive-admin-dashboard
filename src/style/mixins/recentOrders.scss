@@ -1,0 +1,113 @@
+.recentOrders{
+    position: relative;
+    background: $white;
+    padding: 20px;
+    height: 100%;
+    align-items: center;
+
+    .cardHeader{
+        margin-bottom: 1rem;
+
+        @include flex(flex-start,space-between);
+
+        h2{
+            font-weight: 600;
+        }
+
+        .btn{
+            position: relative;
+            padding: 5px 10px;
+            background: #03a9f4;
+            color: $white;
+            border-radius: 6px;
+        }
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+
+        thead{
+
+            td{
+                font-weight: 600;
+
+                &:last-child{
+                    text-align: right;
+                }
+
+                &:nth-child(2){
+                    text-align: right;
+                    padding-right: 20px;
+                }
+
+                &:nth-child(3){
+                    text-align: center;
+                }
+            }
+
+        }
+
+        tbody{
+
+            tr{
+                border-bottom: 1px solid rgba(0,0,0,.1);
+
+                td{
+                    padding: 9px 5px;
+
+                    &:last-child{
+                        text-align: right;
+                    }
+
+                    &:nth-child(2){
+                        text-align: right;
+                        padding-right: 20px;
+                    }
+
+                    &:nth-child(3){
+                        text-align: center;
+                    }
+
+                    .status{
+                        position: relative;
+                        padding: 2px 4px;
+                        color: $white;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        letter-spacing: 1;
+                    }
+
+                    .delivered{
+                        background: #8de02c;
+                    }
+
+                    .pending{
+                        background: #f9ca3f;
+                    }
+
+                    .return{
+                        background: #f00;
+                    }
+
+                    .inprogress{
+                        background: #1795ce;
+                    }
+
+                }
+
+                &:hover{
+                    background: #03a9f4;
+                    color: $white;
+                }
+
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.recentCustomers{
+    position: relative;
+    min-height: 400px;
+    background: $white;
+    padding: 20px;
+
+    .cardHeader{
+        margin-bottom: 1rem;
+    }
+
+    .imgBx{
+        position: relative;
+        @include box(40px,40px);
+        border-radius: 50%;
+        overflow: hidden;
+
+        img{
+            @include abs-position(0,auto,auto,0);
+            @include box(100%,100%);
+            object-fit: cover;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        tr{
+
+            &:hover, &:hover span{
+                background: #03a9f4;
+                color: #fff;
+            }
+
+            td{
+                padding: 5px 10px;
+
+                h4{
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 1.2em;
+
+                    span{
+                        font-size: 14px;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}

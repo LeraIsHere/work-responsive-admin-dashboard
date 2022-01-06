@@ -1,0 +1,106 @@
+@media(max-width:992px){
+
+    .navigation{
+        left: -300px;
+
+        &.active{
+            left: 0;
+            width: 300px;
+        }
+    }
+
+    .main{
+        width: 100%;
+        left: 0;
+
+        &.active{
+            width: calc(100% - 300px);
+            left: 300px;
+        }
+    }
+
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:758px){
+
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .details .recentOrders{
+
+        overflow-x: auto;
+
+        table{
+            width: auto;
+
+            tbody{
+
+                tr{
+
+                    td{
+        
+                        .status{
+                            white-space:nowrap
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+
+        &.active{
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    .toggle{
+
+        &.active{
+            position: fixed;
+            z-index: 10000;
+            right: 0;
+            left: initial;
+        }
+
+        &.active::before{
+            color: $white;
+        }
+    }
+
+    .main,
+    .main.active
+    {
+        width: 100%;
+        left: 0;
+    }
+
+    .search{
+        width: 60%;
+    }
+    
+}

@@ -1,0 +1,39 @@
+.topbar{
+    width: 100%;
+    background: $white;
+    height: 60px;
+    @include flex();
+    padding: 0 10px;
+
+    .toggle{
+        position: relative;
+        @include box(60px,60px);
+        cursor: pointer;
+
+        &:before{
+            content: '\f0c9';
+            font-family: fontAwesome;
+            position: absolute;
+            @include box(100%,100%);
+            line-height: 60px;
+            font-size: 24px;
+            text-align: center;
+            color: $black;
+        }
+    }
+
+    .user{
+        position: relative;
+        @include box(50px,50px);
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img{
+            @include abs-position(0,auto,auto,0);
+            @include box(100%,100%);
+            object-fit: cover;
+        }
+    }
+
+}

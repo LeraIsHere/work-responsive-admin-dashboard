@@ -1,0 +1,65 @@
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: $nav-bg;
+    transition: .5s;
+    overflow: hidden;
+
+    &.active{
+        width: 60px;
+    }
+
+    ul{
+        @include abs-position(0,auto,auto,0);
+        width: 100%;
+
+        li{
+            position: relative;
+            width: 100%;
+
+            &:hover{
+                background: $li-hover;
+            }
+
+            &:nth-child(1){
+                margin-bottom: 20px;
+            }
+            &:nth-child(1):hover{
+                background: transparent;
+            }
+
+            a{
+                position: relative;
+                width: 100%;
+                display: flex;
+                color: $white;
+
+                .icon{
+                    position: relative;
+                    display: block;
+                    min-width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+
+                    i{
+                        color:$white;
+                        font-size: 24px;
+                    }
+                }
+
+                .title{
+                    position: relative;
+                    display: block;
+                    padding: 0 10px;
+                    height: 60px;
+                    line-height: 60px;
+                    white-space: nowrap;
+                    font-size: 1rem;
+                }
+
+            }
+        }
+    }
+}
